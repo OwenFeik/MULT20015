@@ -11,6 +11,7 @@ class Gates:
     S = np.array([[1, 0], [0, 1j]], dtype=complex)
     T = np.array([[1, 0], [0, (1 + 1j) / np.sqrt(2)]], dtype=complex)
     H = np.array([[1, 1], [1, -1]], dtype=complex) / np.sqrt(2)
+    CNOT = np.concatenate((np.eye(4)[:2], np.eye(4)[-2:][::-1]), dtype=complex)
 
     @staticmethod
     def get(key):
